@@ -1,6 +1,5 @@
 # digilabs
- Testovací úkol digilabs
- Autor: Jan Matoušek
+ Testovací úkol digilabs (autor: Jan Matoušek)
 
 
 ## Požadavky
