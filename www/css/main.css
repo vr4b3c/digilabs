@@ -48,34 +48,71 @@
 
 
 body {
-      @apply text-black bg-white;
+      @apply bg-black/90 text-white;
 }
 
 .button {
       @apply py-2 px-4;
-      @apply border border-black/50;
-      @apply bg-black/5;
-      @apply font-semibold;
+      @apply border border-primary-100;
+      @apply bg-primary-100;
+      @apply font-semibold text-primary-900;
       transition: all linear 300ms;
 
 }
 .button.active,
 .button:hover {
-      @apply border-primary-500 text-primary-500;
+      @apply border-primary-100 text-primary-700;
       border-radius: 40px;
 }
 
 header {
+      @apply py-6;
+      @apply border border-0 border-b border-b-primary-100;
 
+      .container {
+            @apply flex flex-row justify-start items-center gap-16;
+      }
+}
+section {
+      @apply py-4;
+}
+article {
+      @apply my-4 py-4 px-6 border border-primary-100/20;
+
+      i {
+            @apply block pt-2 text-white/50;
+      }
 }
 
-
 nav {
-      @apply py-12; 
+ 
 }
 nav ul {
       @apply flex flex-row justify-start items-center gap-4;
 }
 nav a {
       @apply button;
+}
+h1 {
+      @apply font-bold text-3xl text-primary-100;
+}
+h2 {
+      @apply font-bold text-2xl text-primary-100;      
+}
+figure#randomJoke {
+      @apply relative p-4 bg-white;
+      max-width: 700px;
+
+      figcaption {
+            @apply absolute left-0 right-0 font-black text-white text-3xl text-center py-6 px-6 uppercase;
+         
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      }
+      .top-text {
+            @apply top-0;
+      }
+      .bottom-text {
+            @apply bottom-0;
+      }
+
 }

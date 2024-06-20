@@ -16,11 +16,11 @@ final class RouterFactory
 	{
 		$router = new RouteList;
                 
-                $router->addRoute('', [
-                    'presenter' => 'Chuck',
-                    'action'    => 'default'   
-                ]);  
-                
+  
+				$router->addRoute('[<action>]', [
+					'presenter' => 'Chuck',
+					'action' => 'default'
+				]);			
 
 		return $router;
 	}

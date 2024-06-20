@@ -3,7 +3,9 @@
 document.addEventListener("DOMContentLoaded", function() 
 { // ON LOAD
 
- 
+    $.nette.init();
+
+
 }); 
 
 

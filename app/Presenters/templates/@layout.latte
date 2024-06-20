@@ -7,14 +7,13 @@
         <meta name="author" content="Jan Matoušek - jan.matousek@webolution.cz">   
         <meta name="keywords" content="redakční systém, webolution, cms, správa webu"> 
         <meta name="description" content="Vývojová verze nového redakčního webu WEBOLUTION"> 
-        <title>WEBOLUTION</title>
+        <title>Chuck Norris</title>
         
         <link rel="canonical" href="{$baseUrl}" /> 
         <link rel="alternate" href="{$baseUrl}" hreflang="x-default">
         <link rel="icon" href="./www/favicon.ico" type="image/x-icon">   
       
-        <link href="{$baseUrl}/www/css/default.css" rel="stylesheet">  
-        <script src="https://unpkg.com/naja@2/dist/Naja.min.js"></script>            
+        <link href="{$baseUrl}/www/css/default.css" rel="stylesheet"> 
         <script src="{$baseUrl}/www/js/default.js"></script>
   
     </head>
@@ -23,38 +22,85 @@
         
         <header>
             <div class="container">
-                    Chuck rocks!
+
+                <h1>Chuck Norris</h1>
+
+                <nav>
+                    <div class="container">
+                        <ul>
+                            <li>
+                                <a n:href="randomJoke!">Random joke!</a>
+                            </li>
+                            <li>
+                                <a n:href="jokesByInitials!">Only from authors with same initials!</a>
+                            </li>  
+                            <li>
+                                <a n:href="jokesByValid!">Only valid ones</a>
+                            </li>   
+                            <li>
+                                <a n:href="jokesByTime!">+/- 1 month</a>
+                            </li>      
+                            <li>
+                                <a n:href="jokesByCalc!">Valid calculation</a>
+                            </li>          
+                        </ul>          
+                    </div> 
+                </nav>   
+
             </div>
         </header>
-        <nav>
-            <div class="container">
-                <ul>
-                    <li>
-                        <a n:href=":GetRandomJoke!" class="ajax">Random joke!</a>
-                    </li>
-                    <li>
-                        <button>Only from authors with same initials!</button>
-                    </li>  
-                    <li>
-                        <button>Only valid ones</button>
-                    </li>   
-                    <li>
-                        <button>+/- 1 month</button>
-                    </li>      
-                    <li>
-                        <button>Valid calculation</button>
-                    </li>          
-                </ul>          
-            </div> 
-        </nav>
-        
-        {include content}    
-        
-        {snippet randomJoke}
-            {include chuck/randomJoke.latte}
-        {/snippet}
-         
 
+    
+
+        {ifset $jokes} 
+            {if count($jokes)}
+
+                <section id="listJokes">
+                    <div class="container">
+ 
+                        <h2>List of <b>{$listTitle}</b> ({count($jokes)}):</h2>
+
+                        {foreach $jokes as $joke}
+                            <article>
+                                <h3>{$joke[joke]}</h3>
+                                <div class="flex flex-row justify-start gap-12">
+                                    <i>Author: {$joke[name]}</i>
+                                    <i>Created At: {$joke[createdAt]}</i>
+                                    <i>{$joke[firstNumber]} / {$joke[secondNumber]} = {$joke[thirdNumber]}</i>
+                                    <i>calculation: {$joke[calculation]}</i>                                                                
+                                </div>
+                            </article>
+                        {/foreach}
+
+                    </div>
+                </section>
+            {/if}
+        {/ifset}
+        
+
+        {ifset $randomJoke[joke1]}
+            <section class="randomJoke">
+                <div class="container">
+
+
+                    <h2>Random joke:</h2>
+
+                    <figure id="randomJoke">
+                        <figcaption class="top-text">
+                            {$randomJoke[joke1]|upper}
+                        </figcaption>
+
+                        <img src="{$chuckImage}" alt="{$randomJoke[joke]}">
+
+                        <figcaption class="bottom-text">
+                            {$randomJoke[joke2]|upper}
+                        </figcaption>
+                    </figure>
+
+                </div>
+            </section>
+        {/ifset}
+     
 
 
     </body>
