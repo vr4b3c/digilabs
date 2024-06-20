@@ -12,8 +12,8 @@
 
 1. Naklonujte repozitář nebo stáhněte ZIP s projektem.
     ```bash
-    git clone https://github.com/vr4b3c/digilab.git
-    cd digilab
+    git clone https://github.com/vr4b3c/digilabs.git
+    cd digilabs
     ```
 
 2. Nainstalujte závislosti pomocí Composeru.
