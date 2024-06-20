@@ -68,6 +68,8 @@ class ChuckModel
             if ($joke['firstNumber'] % 2 != 0) { // vyloucile liche firstNumber
                 return false;
             }
+
+            if (!$joke['firstNumber'] OR !$joke['secondNumber']) { return false; } // osetreni deleni nulou
             if (($joke['firstNumber'] / $joke['secondNumber']) == $joke['thirdNumber']) {
                 return true;
             }
