@@ -1,0 +1,56 @@
+
+services:
+    - App\Router\RouterFactory::createRouter
+    - App\Models\MyAuthenticator
+#    - App\Models\BaseModel (%config%)
+    - App\Models\CoreModel (%config%)
+    - App\Models\WebModel (%config%)
+    - App\Models\EmailSender (%config%)
+   
+#    - App\Classes\FormFactory
+    - Nette\Caching\Cache
+    cache.storage: Nette\Caching\Storages\FileStorage("%tempDir%")
+    cache.journal: Nette\Caching\Storages\SQLiteJournal("%tempDir%/journal.s3db")
+
+
+application:
+    errorPresenter:
+        '4xx': Error4xx
+        '5xx': Error5xx
+    mapping:
+        *: App\*\Presenters\*Presenter
+
+latte:
+    strictTypes: yes
+
+di:
+    export:
+        parameters: no
+        tags: no
+
+routing:
+    cache: false
+
+session:
+    expiration: 14 days
+    autoStart: smart
+    savePath: "%tempDir%/sessions"
+
+extensions:
+        translation: Contributte\Translation\DI\TranslationExtension
+
+translation:
+        returnOriginalMessage: true
+        localeResolvers:
+            - Contributte\Translation\LocalesResolvers\Session
+        loaders:
+            nettedatabase: Contributte\Translation\Loaders\NetteDatabase
+        dirs:
+            - %appDir%/../lang
+        locales:
+            whitelist: [cs, sk, en]
+            default: cs
+            fallback: [cs]
+
+
+ 

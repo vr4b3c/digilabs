@@ -1,0 +1,5 @@
+
+database:
+    dsn: 'mysql:host=localhost;dbname=cms'
+    user: root
+    password: 

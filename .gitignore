@@ -1,0 +1,15 @@
+.gitattributes
+.sass-cache
+.gitattributes
+nbproject
+vendor
+log
+temp
+composer.lock
+config/config.prod.neon
+config/parameters.neon
+tailwind.exe
+tailwindcss
+uploads
+
+
