@@ -21,16 +21,9 @@
     composer install
     ```
 
-3. Zajistěte, že složky `log`, `temp` a `temp/sessions` mají správná oprávnění.
-    ```bash
-    chmod -R 0777 log temp sessions
-    ```
+3. Vytvořte v kořenovém adresáři zapisovatelné složky `log`, `temp` a `temp/sessions`.
 
-4. Spusťte interní PHP server.
-    ```bash
-    php -S localhost:8000 -t www
-    ```
 
-5. Otevřete webový prohlížeč a přejděte na adresu `http://localhost:8000`.
+4. Otevřete adresu projektu dle svého serveru `http://localhost:8000/digilab`.
 
 

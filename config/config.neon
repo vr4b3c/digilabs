@@ -27,6 +27,6 @@ routing:
 
 session:
     expiration: 14 days
-    autoStart: true
-    savePath: "%tempDir%/sessions"
+    autoStart: false
+
 
