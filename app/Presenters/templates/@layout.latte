@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> 
+        <meta name="robots" content="noindex, nofollow">    
+        <meta name="author" content="Jan Matoušek - jan.matousek@webolution.cz">   
+        <meta name="keywords" content="redakční systém, webolution, cms, správa webu"> 
+        <meta name="description" content="Vývojová verze nového redakčního webu WEBOLUTION"> 
+        <title>WEBOLUTION</title>
+        
+        <link rel="canonical" href="{$baseUrl}" /> 
+        <link rel="alternate" href="{$baseUrl}" hreflang="x-default">
+        <link rel="icon" href="./www/favicon.ico" type="image/x-icon">   
+      
+        <link href="{$baseUrl}/www/css/default.css" rel="stylesheet">  
+        <script src="https://unpkg.com/naja@2/dist/Naja.min.js"></script>            
+        <script src="{$baseUrl}/www/js/default.js"></script>
+  
+    </head>
+    <body> 
+
+        
+        <header>
+            <div class="container">
+                    Chuck rocks!
+            </div>
+        </header>
+        <nav>
+            <div class="container">
+                <ul>
+                    <li>
+                        <a n:href=":GetRandomJoke!" class="ajax">Random joke!</a>
+                    </li>
+                    <li>
+                        <button>Only from authors with same initials!</button>
+                    </li>  
+                    <li>
+                        <button>Only valid ones</button>
+                    </li>   
+                    <li>
+                        <button>+/- 1 month</button>
+                    </li>      
+                    <li>
+                        <button>Valid calculation</button>
+                    </li>          
+                </ul>          
+            </div> 
+        </nav>
+        
+        {include content}    
+        
+        {snippet randomJoke}
+            {include chuck/randomJoke.latte}
+        {/snippet}
+         
+
+
+
+    </body>
+</html>

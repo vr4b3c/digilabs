@@ -1,0 +1,81 @@
+@config "../js/tailwind.config.js";
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@font-face {
+      font-family: "Montserrat";
+      font-weight: 200;
+      font-style: normal;
+      src: url("../fonts/Montserrat-Light.woff2") format("woff2");
+}
+@font-face {
+      font-family: "Montserrat";
+      font-weight: 400;
+      font-style: normal;
+      src: url("../fonts/Montserrat-Regular.woff2") format("woff2");
+}
+@font-face {
+      font-family: "Montserrat";
+      font-weight: 700;
+      font-style: normal;
+      src: url("../fonts/Montserrat-SemiBold.woff2") format("woff2");
+}
+@font-face {
+      font-family: 'Material Icons';
+      font-style: normal;
+      font-weight: 400;
+      src: url('../fonts/Material-Icons.woff2') format('woff2');
+}
+.material-icons {
+      font-family: 'Material Icons';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 24px;
+      line-height: 1;
+      letter-spacing: normal;
+      text-transform: none;
+      display: inline-block;
+      white-space: nowrap;
+      word-wrap: normal;
+      direction: ltr;
+      -webkit-font-feature-settings: 'liga';
+      -webkit-font-smoothing: antialiased;
+}
+
+/*********** CHUCK STYLES ***************/
+
+
+body {
+      @apply text-black bg-white;
+}
+
+.button {
+      @apply py-2 px-4;
+      @apply border border-black/50;
+      @apply bg-black/5;
+      @apply font-semibold;
+      transition: all linear 300ms;
+
+}
+.button.active,
+.button:hover {
+      @apply border-primary-500 text-primary-500;
+      border-radius: 40px;
+}
+
+header {
+
+}
+
+
+nav {
+      @apply py-12; 
+}
+nav ul {
+      @apply flex flex-row justify-start items-center gap-4;
+}
+nav a {
+      @apply button;
+}

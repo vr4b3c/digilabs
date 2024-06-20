@@ -2,14 +2,7 @@
 
 declare(strict_types=1);
 
-// CONSTANTS
-define("PREFIX", "cms_");
-
-
-require dirname(__DIR__) . '/app/functions.php';
 require dirname(__DIR__) . '/vendor/autoload.php';
-
-createRequiredFolders();
 
 $configurator = App\Bootstrap::boot();
 $container    = $configurator->createContainer();

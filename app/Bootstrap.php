@@ -22,8 +22,7 @@ class Bootstrap
                          ->addDirectory(__DIR__)
                          ->register();
 
-            $configurator->addConfig($root.'/config/config.neon');
-            $configurator->addConfig($root.'/config/parameters.neon');   
+            $configurator->addConfig($root.'/config/config.neon');  
             $configurator->addConfig($root."/config/config.$enviroment.neon");       
 
             return $configurator;

@@ -1,7 +1,7 @@
 {
-	"name": "vr4b3c/cms",
-	"description": "Vrabcovo cé em esko",
-	"keywords": ["vrabec","cms"],
+	"name": "vr4b3c/digilabs",
+	"description": "Testovací projekt Digilabs",
+	"keywords": ["digilabs"],
 	"type": "project",
 	"license": ["MIT", "BSD-3-Clause", "GPL-2.0", "GPL-3.0"],
 	"require": {
@@ -13,13 +13,12 @@
 		"nette/di": "^3.2",
 		"nette/forms": "^3.2",
 		"nette/http": "^3.3",
-		"nette/mail": "^4.0",
 		"nette/robot-loader": "^4.0",
 		"nette/security": "^3.2",
 		"nette/utils": "^4.0",
 		"latte/latte": "^3.0",
 		"tracy/tracy": "^2.10",
-		"contributte/translation": "v2.0.5"
+
 	},
 	"require-dev": {
 		"nette/tester": "^2.5",

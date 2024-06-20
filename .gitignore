@@ -2,9 +2,10 @@
 .sass-cache
 .gitattributes
 nbproject
-vendor
-log
-temp
+vendor/*
+log/*
+temp/cache/*
+temp/sessions/*
 composer.lock
 config/config.prod.neon
 config/parameters.neon
