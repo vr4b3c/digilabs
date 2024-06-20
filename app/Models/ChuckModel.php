@@ -71,6 +71,7 @@ class ChuckModel
             if (!$joke['firstNumber'] OR !$joke['secondNumber']) { 
                 return false; 
             } 
+
             if (($joke['firstNumber'] / $joke['secondNumber']) == $joke['thirdNumber']) {
                 return true;
             }

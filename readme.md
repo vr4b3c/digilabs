@@ -1,5 +1,5 @@
 # digilabs
- Testovací úkol digilabs
+ Testovací úkol digilabs (autor: Jan Matoušek)
 
 
 ## Požadavky
@@ -10,10 +10,10 @@
 
 ## Instalace
 
-1. Naklonujte repozitář nebo stáhněte ZIP s projektem.
+1. Naklonujte repozitář nebo stáhněte ZIP s projektem na Váš PHP server.
     ```bash
-    git clone https://github.com/vr4b3c/digilab.git
-    cd digilab
+    git clone https://github.com/vr4b3c/digilabs.git
+    cd digilabs
     ```
 
 2. Nainstalujte závislosti pomocí Composeru.
@@ -21,9 +21,8 @@
     composer install
     ```
 
-3. Vytvořte v kořenovém adresáři zapisovatelné složky `log`, `temp` a `temp/sessions`.
+3. Vytvořte v kořenovém adresáři projektu zapisovatelné složky `log`, `temp` a `temp/sessions`.
 
-
-4. Otevřete adresu projektu dle svého serveru `http://localhost:8000/digilab`.
+4. Otevřete adresu projektu dle svého serveru, obecně `http://localhost/digilabs`.
 
 
